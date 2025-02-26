@@ -1,0 +1,35 @@
+.project{
+    padding: 5% 15%;
+    min-height: 100vh;
+    width: 100vw;
+
+    .link{
+        display: flex;
+        align-items: center;
+    }
+    h1{
+        margin-left: 25px;
+        margin-bottom: 1vw;
+        overflow: hidden;
+    }
+
+    .descr{
+        font-size: larger;
+        word-wrap: break-word;
+        overflow-wrap: break-word; 
+        white-space: normal;
+        margin-top: 2vw;
+        width: 80vw;
+    }
+
+    .blankLink{
+        margin-top: 1vw;
+        border-top: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        svg{
+            margin-left: 5px;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+$primary-color: #007bff;
+$dark-text-color: #1d1d1d;
+$gray-color: #817070;
+
+.header {
+  //height: 5rem;
+  //background-color: #007bff;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  //background-image: url("../../assets/imgs/snow.jpeg");
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+
+  @media (min-width: 1920px){
+    padding-right: 4rem;
+    padding-left: 2rem;
+  }
+
+  span{
+    font-size: 14px;
+    //display: none;
+
+    @media (min-width: 768px){
+      display: block;
+      font-size: 24px;
+    }
+  }
+
+  .userFetch{
+    display: none;
+
+    @media (min-width: 768px){
+      display: block;
+    }
+  }
+
+  &-profile {
+    &__wrap {
+      display: flex;
+      gap: 4rem;
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 14px;
+      cursor: pointer;
+
+      @media (min-width: 768px){
+        font-size: 22px;
+      }
+    }
+  }
+
+  .pointer{
+    cursor: pointer;
+  }
+}

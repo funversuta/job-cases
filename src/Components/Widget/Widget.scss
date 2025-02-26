@@ -1,0 +1,38 @@
+.Widget{
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    background-color: #4fa0f1;    
+    padding: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1;
+
+    @media (min-width: 768px){
+        bottom: 3rem;
+        right: 4rem;
+      }
+
+    &.active{
+        svg{
+            transform: rotate(-45deg);
+        }
+    }
+
+    svg{
+        width: 4rem;
+        height: 4rem;
+        transition: 0.3s ease-in-out transform;
+    }
+}
+
+.MuiTooltip-tooltip{
+    background-color: white !important;
+    //font-size: 1rem !important;
+    color: var(--dark-text-color) !important;   
+    padding: 1rem !important;
+
+    @media (min-width: 768px){
+        font-size: 1rem !important;
+      }
+}

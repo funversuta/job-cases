@@ -1,0 +1,152 @@
+.Card {
+  border: 1px solid var(--gray-color);
+  cursor: pointer;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  //width: 49%;
+  background-color: var(--dark-text-color);
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+
+  align-items: center;
+
+  // @media (min-width: 768px){
+  //   width: 49%;
+  //   flex-direction: row;
+  // }
+
+  @media (min-width: 1280px){
+    width: 49%;
+    flex-direction: row;
+  }
+  
+  @media (min-width: 1440px) {
+   font-size: 14px;
+  }
+
+  @media (min-width: 1920px) {
+    font-size: 16px;
+   }
+ 
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ширина псевдоэлемента равна ширине блока */
+    height: 100%; /* Высота псевдоэлемента равна высоте блока */
+
+    transform: translateX(-100%); /* Начальное положение слева */
+    transition: transform 0.5s ease-in-out; /* Плавный переход */
+  }
+
+  &:hover {
+    .more{
+        scale: 1.2;
+    }
+    img {
+      opacity: 0.7;
+    }
+  }
+
+  &:hover::before {
+    transform: translateX(
+      0
+    ); /* Перемещение в исходное положение при наведении */
+    background-color: rgb(134, 131, 131);
+  }
+
+  img {
+    z-index: 1;
+    transition: 0.3s ease-in-out opacity;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+
+  &-body {
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+    text-align: start;
+
+    &__title {
+      margin-bottom: 0.5rem;
+      font-size: 22px;
+      font-style: italic;
+      letter-spacing: 1px;
+
+      @media (min-width: 1900px){
+        margin-bottom: 25px;
+      }
+    }
+
+    &__description{
+
+      @media (min-width: 1280px){
+        margin-bottom: 25px;
+      }
+    }
+
+    &__tags {
+      display: flex;
+      position: relative;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 5px;
+      margin-bottom: 10px;
+
+      @media (min-width: 1280px){
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+      }
+
+      @media (min-width: 1440px) {
+        left: 15px;
+      }
+      
+    }
+    &__tag {
+      margin-left: 0.5rem;
+      border: 1px solid var(--gray-color);
+      padding: 6px 12px;
+      border-radius: 25px;
+      font-size: 16px;
+      background-color: var(--blue-color);
+
+      @media (min-width: 1440px) {
+        font-size: 12px;
+      }
+
+      @media (min-width: 1920px) {
+        font-size: 14px;
+      }
+    }
+    .more {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 20px;
+      font-style: italic;
+      transition: 0.3s ease-in-out scale;
+
+      @media (min-width: 1280px){
+        display: none;
+      }
+
+      @media (min-width: 1440px) {
+        font-size: 12px;
+        display: block;
+      }
+      @media (min-width: 1920px) {
+        font-size: 20px;
+      }
+    }
+  }
+}

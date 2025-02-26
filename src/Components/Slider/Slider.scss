@@ -1,0 +1,50 @@
+.slider {
+  display: flex;
+  align-items: center;
+  width: 60vw;
+  height: 30vw;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.7),
+      -5px -5px 5px rgba(255, 255, 255, 0.7);
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transition: opacity 0.5s ease-in-out; /* Плавный переход для изменения прозрачности */
+    position: absolute; /* Позволяет наложить изображения друг на друга */
+    top: 0;
+    left: 0;box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.7),
+    -5px -5px 5px rgba(255, 255, 255, 0.7);
+    
+    
+    &.hidden {
+      opacity: 0; /* Изображение невидимо */
+    }
+    &.visible {
+        opacity: 1; /* Изображение невидимо */
+      }
+  }
+
+  .sliderLeft {
+    position: absolute;
+    left: 2%;
+    z-index: 1;
+  }
+  .sliderRight {
+    position: absolute;
+    right: 2%;
+    z-index: 1;
+  }
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+}

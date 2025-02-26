@@ -1,0 +1,70 @@
+.Chat {
+  position: fixed;
+  bottom: 8rem;
+  right: 2rem;
+  width: 300px;
+  height: 400px;
+  background-color: var(--blue-color);
+  border-radius: 25px;
+  color: white;
+  padding: 1rem;
+  z-index: 1;
+
+  @media (min-width: 768px) {
+    bottom: 6rem;
+    right: 12rem;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  &__body {
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .response {
+    height: 12rem;
+    overflow: auto;
+    background-color: var(--dark-text-color);
+    padding: 10px;
+    padding-bottom: 0;
+    border-radius: 25px;
+
+    li {
+      margin: auto;
+      margin-bottom: 1vw;
+      background-color: white; //#4b4b4b
+      color: var(--dark-text-color);
+      padding: 10px;
+      border-radius: 25px;
+    }
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    input {
+      padding: 5px;
+      background-color: white;
+      margin-right: 5px;
+      width: 100%;
+      height: fit-content;
+      color: var(--dark-text-color);
+      border-radius: 8px;
+    }
+    button {
+      font-size: 1rem;
+    }
+  }
+}

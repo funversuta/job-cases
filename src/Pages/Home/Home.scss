@@ -1,0 +1,63 @@
+$primary-color: #007bff;
+$dark-text-color: #1d1d1d;
+$gray-color: #817070;
+
+.HomePage {
+  background-color: $dark-text-color;
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+  background-image: url("/imgs/bg.jpg");
+  background-repeat: repeat-y;
+  //object-fit: contain;
+
+  @media (min-width: 1280px){
+    background-repeat: no-repeat;
+  }
+
+  .Cases{
+    font-size: 42px;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 4px;
+    padding-bottom: 50px;
+
+    @media (min-width: 768px){
+      width: 90%;
+      margin: auto;
+      padding-bottom: 50px;
+    }
+
+    @media (min-width: 1280px){
+      width: 95%;
+      padding-bottom: 50px;
+    }
+
+    @media (min-width:1920px){
+      width: 80%;
+      padding-bottom: 50px;
+    }
+
+    &__body{
+        padding: 1rem;
+        border-radius: 25px;
+        border: 1px solid $gray-color;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        //max-height: 35vw;
+        overflow: auto;
+        &::-webkit-scrollbar-button {
+          display: none; /* Скрывает кнопки (стрелочки) */
+      }
+
+      @media (min-width: 1280px){
+        max-height: 35vw;
+      }
+    }
+  }
+  
+}
