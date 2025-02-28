@@ -2,4 +2,4 @@
 
 ## npm i, npm run dev:full для запуска сервера и работы с websocket, если нужно протестировать чат виджет
 
-### mini-app with ws, ts, rtk, material-ui
+### mini-app with ws, ts, rtk, mui
